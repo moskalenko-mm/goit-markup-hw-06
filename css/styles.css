@@ -15,6 +15,7 @@
 	--work-overflow-bg: rgba(33, 150, 243, 0.9);
 	--backdrop-bg: rgba(0, 0, 0, 0.2);
 	--modal-btn-border: rgba(0, 0, 0, 0.1);
+	--activities-overflow-color: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -304,6 +305,30 @@ img {
 
 .activities .item {
 	flex-basis: calc((100% - 60px) / 3);
+}
+
+.activities-thumb {
+	position: relative;
+}
+
+.activities-overflow {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+
+	background-color: var(--activities-overflow-color);
+}
+
+.activities-text {
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--prymary-white-color);
 }
 
 .activities-title,
@@ -606,7 +631,8 @@ img {
 
 	scale: 1;
 	background-color: var(--backdrop-bg);
-	transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
