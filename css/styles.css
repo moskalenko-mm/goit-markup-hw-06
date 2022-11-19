@@ -551,16 +551,13 @@ img {
 	width: 358px;
 	padding-left: 16px;
 
+	font-size: 16px;
+	line-height: 1.25;
+	color: var(--footer-contacts-color);
 	border: 1px solid var(--footer-subscribe-border-color);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
 	background: transparent;
-}
-
-.subscribe:focus-within .input {
-	outline: none;
-	border-color: var(--accent-color);
-	cursor: pointer;
 }
 
 .subscribe-form .input::placeholder {
